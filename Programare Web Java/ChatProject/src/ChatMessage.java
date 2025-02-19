@@ -3,9 +3,6 @@ import java.io.Serializable;
 
 // Definim clasa ChatMessage care implementează Serializable
 public class ChatMessage implements Serializable {
-    // Această constantă ajută la compatibilitatea serializării
-    private static final long serialVersionUID = 1L;
-
     // Variabile pentru numele expeditorului și conținutul mesajului
     private String sender;
     private String message;
