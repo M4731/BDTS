@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5532a832-96c7-4783-85c0-bcbfeb84543b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChatProject_Doc.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatProject_Doc.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$atProject_Doc.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../~$atProject_Doc.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~WRL0005.tmp" beforeDir="false" />
-    </list>
+    <list default="true" id="5532a832-96c7-4783-85c0-bcbfeb84543b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
