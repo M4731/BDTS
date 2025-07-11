@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="5532a832-96c7-4783-85c0-bcbfeb84543b" name="Changes" comment="" />
+=======
+    <list default="true" id="5532a832-96c7-4783-85c0-bcbfeb84543b" name="Changes" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChatMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChatMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChatProject_Doc.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../ChatProject_Doc.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$atProject_Doc.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../~$atProject_Doc.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~WRL0005.tmp" beforeDir="false" />
+>>>>>>> ec45bff0acba80ea34abbd1d95be6a829c015e4b
+    </list>
+>>>>>>> 75ac9d199066dd137c835e2d957ce30e33028cec
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +49,10 @@
     "Application.ChatServer.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
+=======
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+>>>>>>> ec45bff0acba80ea34abbd1d95be6a829c015e4b
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
@@ -41,6 +60,8 @@
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+<<<<<<< HEAD
+=======
   <component name="RunManager">
     <configuration name="ChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChatServer" />
@@ -62,6 +83,7 @@
       </set>
     </attachedChunks>
   </component>
+>>>>>>> ec45bff0acba80ea34abbd1d95be6a829c015e4b
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
