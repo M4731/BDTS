@@ -1,0 +1,1289 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai/"
+     xml:base="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologieRaseCai="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCuloareRoba -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCuloareRoba">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteCuloareRobaPentru"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areLinieFondatoare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areLinieFondatoare">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#participaLaProcesulDeDezvoltare"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLinieFondatoarePentru"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areModelDeCuloare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areModelDeCuloare">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteModelDeCuloarePentru"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areOrigineIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areOrigineIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLegatDeLocatie"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteOriginePentru"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areUtilizarePrincipala -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areUtilizarePrincipala">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteUtilizarePrincipalaPentru"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteCuloareRobaPentru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteCuloareRobaPentru">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteDezvoltataDin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteDezvoltataDin">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#participaLaProcesulDeDezvoltare"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteFundatiePentru"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteFundatiePentru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteFundatiePentru">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#participaLaProcesulDeDezvoltare"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLegatDeLocatie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLegatDeLocatie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLinieFondatoarePentru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLinieFondatoarePentru">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#participaLaProcesulDeDezvoltare"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteMersAl -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteMersAl">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#prezintaMersul"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteModelDeCuloarePentru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteModelDeCuloarePentru">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteOriginePentru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteOriginePentru">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLegatDeLocatie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteUtilizarePrincipalaPentru -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteUtilizarePrincipalaPentru">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#imparteOrigineaCu -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#imparteOrigineaCu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteLegatDeLocatie"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteDezvoltataDin"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areOrigineIn"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#participaLaProcesulDeDezvoltare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#participaLaProcesulDeDezvoltare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#prezintaMersul -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#prezintaMersul">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areCaracteristicaGenerala"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areDescriereTextuala -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areDescriereTextuala"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areMasuratoareFizica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areMasuratoareFizica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areStatusExistenta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areStatusExistenta"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#descriereTemperament -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#descriereTemperament">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areDescriereTextuala"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteExtincta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteExtincta">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areStatusExistenta"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#greutateMedieKg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#greutateMedieKg">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areMasuratoareFizica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#inaltimeMedieCm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#inaltimeMedieCm">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areMasuratoareFizica"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalBaroc"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#istoricRasa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#istoricRasa">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areDescriereTextuala"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#sperantaDeViata -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#sperantaDeViata">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areDescriereTextuala"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#AmericaDeNord -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#AmericaDeNord">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArmasarFondator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArmasarFondator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Asia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Asia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Buiestru -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Buiestru">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalBaroc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalBaroc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalCuMersSpecial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalCuMersSpecial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeCursePur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeCursePur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalarieDeAgrement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalarieDeAgrement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Canter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Canter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ComplexLeopard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ComplexLeopard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Continent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Continent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RegiuneGeografica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeGalop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeGalop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportDeCurse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeTrap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeTrap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportDeCurse"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Dresaj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Dresaj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportOlimpicEcvestru"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Eventing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Eventing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportOlimpicEcvestru"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Galop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Galop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#IapaFondatoare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#IapaFondatoare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareDeMunca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaLaFerma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaLaFerma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareDeMunca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaLaPadure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaLaPadure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareDeMunca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Overo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Overo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Pas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Pas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Ponei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Ponei">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTemperament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTemperament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RegiuneGeografica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RegiuneGeografica"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeFierbinte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeFierbinte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTemperament"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTemperament"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCalDupaTemperament"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteDezvoltataDin"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeFierbinte"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#esteDezvoltataDin"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SarituriPesteObstacole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SarituriPesteObstacole">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportOlimpicEcvestru"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportDeCurse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportDeCurse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareSportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportOlimpicEcvestru -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SportOlimpicEcvestru">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareSportiva"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tobiano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tobiano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tovero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tovero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Trap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Trap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#TulpinaDeBaza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#TulpinaDeBaza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#LinieGenealogica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareDeMunca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareDeMunca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareSportiva -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#UtilizareSportiva">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArabiaSaudita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArabiaSaudita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Asia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Austria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Austria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ByerleyTurk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ByerleyTurk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArmasarFondator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalarieDeAnduranta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalarieDeAnduranta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ClydesDale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ClydesDale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+        <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Murg"/>
+        <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Roib"/>
+        <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MareaBritanie"/>
+        <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola"/>
+        <ontologieRaseCai:descriereTemperament>Docil, calm, blând, cunoscut ca un &apos;gigant blând&apos;.</ontologieRaseCai:descriereTemperament>
+        <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900</ontologieRaseCai:greutateMedieKg>
+        <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">178</ontologieRaseCai:inaltimeMedieCm>
+        <ontologieRaseCai:istoricRasa>Dezvoltat în valea râului Clyde din Scoția pentru transport și agricultură grea.</ontologieRaseCai:istoricRasa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ComplexLeopard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ComplexLeopard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeGalop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeGalop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DarleyArabian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DarleyArabian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArmasarFondator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Deres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Deres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DresajAcademic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DresajAcademic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#GodolphinArabian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#GodolphinArabian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArmasarFondator"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Izabel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Izabel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Lipitan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Lipitan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri"/>
+        <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Murg"/>
+        <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Negru"/>
+        <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Austria"/>
+        <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DresajAcademic"/>
+        <ontologieRaseCai:descriereTemperament>Inteligent, docil, cu un temperament vioi</ontologieRaseCai:descriereTemperament>
+        <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">550</ontologieRaseCai:greutateMedieKg>
+        <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</ontologieRaseCai:inaltimeMedieCm>
+        <ontologieRaseCai:istoricRasa>Dezvoltat în secolul al XVI-lea la herghelia Lipica pentru casa imperială de Habsburg.</ontologieRaseCai:istoricRasa>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MareaBritanie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MareaBritanie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Murg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Murg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Negru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Negru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Maro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Maro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Overo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Overo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Palomino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Palomino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#PursangeEnglez -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#PursangeEnglez">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeFierbinte"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#areLinieFondatoare"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArmasarFondator"/>
+            </owl:Restriction>
+        </rdf:type>
+        <ontologieRaseCai:areLinieFondatoare rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ByerleyTurk"/>
+        <ontologieRaseCai:areLinieFondatoare rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DarleyArabian"/>
+        <ontologieRaseCai:areLinieFondatoare rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#GodolphinArabian"/>
+        <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MareaBritanie"/>
+        <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CurseDeGalop"/>
+        <ontologieRaseCai:descriereTemperament>Curajos, energic, determinat, uneori coleric.</ontologieRaseCai:descriereTemperament>
+        <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">168</ontologieRaseCai:inaltimeMedieCm>
+        <ontologieRaseCai:istoricRasa>Rasă dezvoltată în Anglia în secolele XVII-XVIII pentru curse de viteză.</ontologieRaseCai:istoricRasa>
+    </owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Frizian -->
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Frizian">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Negru"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Olanda"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#DresajAcademic"/>
+    <ontologieRaseCai:descriereTemperament>Nobil, energic, dar docil și cooperant.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">165</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa>Rasă veche originară din Frizia, folosită inițial pentru tracțiune și ceremonii.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Arab -->
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Arab">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeFierbinte"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ArabiaSaudita"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalarieDeAnduranta"/>
+    <ontologieRaseCai:descriereTemperament>Viu, inteligent, sensibil și loial.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa>Una dintre cele mai vechi rase, crescută de triburile beduine din Peninsula Arabică.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Shire -->
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Shire">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Negru"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Maro"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Roib"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Anglia"/>
+    <ontologieRaseCai:descriereTemperament>Blând, calm și docil, ideal pentru muncă grea și parade.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa>Dezvoltat în Anglia pentru a trage care încărcate și echipamente agricole grele. Una dintre cele mai masive rase de cai.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Andaluz -->
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Andaluz">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeCalarie"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeCald"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Maro"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Spania"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Show"/>
+    <ontologieRaseCai:descriereTemperament>Nobil, ascultător și agil, perfect pentru dresaj.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">550</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa>Crescut în sudul Spaniei, renumit pentru eleganță și mișcări expresive.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mustang -->
+
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Mustang">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeCalarie"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeCald"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Roib"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SUA"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Transport"/>
+    <ontologieRaseCai:descriereTemperament>Independent, curajos și rezistent.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">145</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa>Cai sălbatici descendenți din caii iberici aduși în America de Sud și Nord. Simbol al Vestului Sălbatic.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Haflinger -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Haflinger">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Roib"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Austria"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola"/>
+    <ontologieRaseCai:descriereTemperament rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calm, docil, ascultător și prietenos, ideal pentru copii și activități recreative.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">145</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Originar din Tirolul austriac, Haflingerul este apreciat pentru rezistență și temperament blând. Utilizat în munți pentru transport și agricultură.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Percheron -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Percheron">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Franta"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola"/>
+    <ontologieRaseCai:descriereTemperament rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Puternic, răbdător și cooperant, ideal pentru muncă grea și atelaje.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">900</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">170</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasă franceză de tracțiune grea, originară din regiunea Le Perche.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#AkhalTeke -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#AkhalTeke">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeCalarie"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeFierbinte"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Izabel"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Turkmenistan"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalarieDeAnduranta"/>
+    <ontologieRaseCai:descriereTemperament rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independent, sensibil, loial, dar dificil de dresat.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">155</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasă antică din Asia Centrală, recunoscută pentru blana sa metalizată și rezistența în deșert.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Marwari -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Marwari">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeCalarie"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeCald"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Negru"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#India"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Parada"/>
+    <ontologieRaseCai:descriereTemperament rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viguros, loial și curajos. Recunoscut pentru urechile curbate în interior.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">155</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasă tradițională indiană din Rajasthan, folosită de războinicii Rajput.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tarpan -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tarpan">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Ucraina"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Conservare"/>
+    <ontologieRaseCai:descriereTemperament rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sălbatic, rezistent, independent. Reprodus în programe de conservare.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">350</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rasă sălbatică europeană dispărută în secolul XIX, reconstituită genetic în Polonia.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Fjord -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Fjord">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeRece"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Murg"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Norvegia"/>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MuncaAgricola"/>
+    <ontologieRaseCai:descriereTemperament rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Docil, sigur pe el, rezistent. Ideal pentru începători și muncă montană.</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">145</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Una dintre cele mai vechi rase europene, crescută în Norvegia de peste 2.000 de ani.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MangalargaMarchador -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#MangalargaMarchador">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Palomino"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Brazilia"/>
+    <ontologieRaseCai:descriereTemperament>Dominant</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Parada"/>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">430</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">152</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa> Rasă națională a Braziliei, apreciată pentru mersul „marcha”.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Konik -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Konik">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#RasaDeCal"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SangeSemigreu"/>
+    <ontologieRaseCai:areCuloareRoba rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Gri"/>
+    <ontologieRaseCai:areOrigineIn rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Polonia"/>
+    <ontologieRaseCai:descriereTemperament>Independent, adaptabil și sobru</ontologieRaseCai:descriereTemperament>
+    <ontologieRaseCai:areUtilizarePrincipala rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Conservare"/>
+    <ontologieRaseCai:greutateMedieKg rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">350</ontologieRaseCai:greutateMedieKg>
+    <ontologieRaseCai:inaltimeMedieCm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135</ontologieRaseCai:inaltimeMedieCm>
+    <ontologieRaseCai:istoricRasa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Konik este o rasă poloneză derivată din tipul Tarpan, folosită în proiecte ecologice de reîmpădurire și menținerea biodiversității.</ontologieRaseCai:istoricRasa>
+</owl:NamedIndividual>
+
+<!-- Franța -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Franta">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+</owl:NamedIndividual>
+
+<!-- Turkmenistan -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Turkmenistan">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Asia"/>
+</owl:NamedIndividual>
+
+<!-- India -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#India">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Asia"/>
+</owl:NamedIndividual>
+
+<!-- Norvegia -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Norvegia">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+</owl:NamedIndividual>
+
+<!-- Parada -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Parada">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+</owl:NamedIndividual>
+
+<!-- Conservare -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Conservare">
+    <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Calarie -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Calarie">
+<rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Show -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Show">
+<rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Transport -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Transport">
+<rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Utilizare"/>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Anglia -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Anglia">
+<rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+</owl:NamedIndividual>
+
+
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Roib -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Roib">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Culoare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Romania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Romania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+    
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Ucraina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Ucraina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Brazilia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Brazilia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Polonia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Polonia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Olanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Olanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SUA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#SUA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#AmericaDeNord"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Spania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Spania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Europa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tobiano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tobiano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tovero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Tovero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#ModelDeCuloare"/>
+    </owl:NamedIndividual>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment>Dezvoltarea unei ontologii dedicate raselor de cai oferă multiple beneficii, transformând o colecție de informații disparate într-o resursă de cunoaștere structurată și interogabilă:
+
+    Organizarea și Standardizarea Cunoștințelor: O ontologie permite structurarea sistematică a informațiilor despre rasele de cai, incluzând caracteristicile lor morfologice, temperamentale, originea, utilizările, istoricul și alte date relevante. Aceasta abordează provocarea reprezentată de diversitatea și, uneori, inconsistența informațiilor disponibile din surse multiple, cum ar fi cele web.   
+
+    Integrarea Datelor: Facilitează combinarea și armonizarea informațiilor provenite din surse eterogene, cum ar fi registrele genealogice ale raselor, bazele de date genetice, înregistrările de performanță în competiții sau studii științifice.
+    Căutare și Interogare Avansată: Permite formularea unor interogări complexe care depășesc capacitățile căutărilor simple bazate pe cuvinte cheie. De exemplu, se pot căuta &quot;toate rasele de cai originare din Europa de Est, potrivite pentru călărie de anduranță, cu un temperament calm&quot;.
+    Raționament Automatizat: Prin definirea axiomelor și restricțiilor, ontologia permite inferarea automată a unor fapte noi. De exemplu, dacă o rasă este utilizată pentru dresaj, iar dresajul necesită un grad înalt de antrenabilitate, se poate infera că rasa respectivă posedă probabil o antrenabilitate ridicată.
+    Fundație pentru Aplicații: Poate servi drept bază de cunoștințe pentru dezvoltarea unor sisteme expert, instrumente educaționale, aplicații de asistență în selecția raselor pentru diverse scopuri sau platforme de management al informațiilor ecvestre.</rdfs:comment>
+        <owl:versionInfo>v 1.0</owl:versionInfo>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalDeTractiune"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#CalUsor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mihail/ontologies/2025/5/ontologieRaseCai#Ponei"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
