@@ -1,0 +1,125 @@
+SLIDE 1 – TITLU
+„Tema prezentării este impactul protocolului MCP asupra interoperabilității în Web-ul Agentic Deschis, un subiect aflat la intersecția dintre Cloud Computing, agenți software și sisteme distribuite.”
+🧠 Ce să știi dacă te întreabă
+Web Agentic = web în care agenții sunt actori principali, nu doar utilizatorii
+MCP = protocol, nu framework, nu API
+
+
+SLIDE 2 – Introducere în Web-ul Agentic
+„Cloud Computing a evoluat de la aplicații clasice la sisteme distribuite complexe. În acest context apar agenții software autonomi, care pot colabora între ei. Pentru ca această colaborare să fie posibilă la scară mare, interoperabilitatea devine un factor esențial.”
+🧠 Dacă te întreabă:
+„De ce e importantă interoperabilitatea?”
+👉 Pentru că agenții sunt:
+dezvoltați independent
+rulați pe clouduri diferite
+inutili dacă nu pot coopera
+
+
+SLIDE 3 – Agenți software: definiție și rol
+„Un agent software este mai mult decât o aplicație clasică: el percepe mediul, ia decizii și acționează autonom. Aceste caracteristici permit construirea de sisteme adaptive și inteligente.”
+🧠 Întrebări posibile:
+Diferența agent vs microserviciu?
+👉 Microserviciul execută logică fixă; agentul decide și inițiază acțiuni
+Agent = AI?
+👉 Nu obligatoriu. Agentul poate folosi AI, dar conceptul e mai larg.
+
+
+SLIDE 4 – De la aplicații clasice la sisteme multi-agent
+🧠 Dacă te provoacă:
+De ce cloud + multi-agent funcționează bine împreună?
+👉 Cloud oferă:
+scalare dinamică
+izolare
+distribuție geografică
+
+
+SLIDE 5 – Necesitatea standardizării în Web-ul Agentic
+🧠 Întrebare clasică:
+„De ce nu sunt suficiente API-urile?”
+👉 API-urile:
+sunt rigide
+nu gestionează context
+nu permit descoperire dinamică
+
+
+SLIDE 6 – MCP: concept și arhitectură
+„MCP este un protocol care se interpune între agenți și resurse. El oferă acces standardizat la date și instrumente și gestionează contextul cererilor într-un mod coerent.”
+🧠 Foarte probabil:
+Ce înseamnă „context” aici?
+👉 Starea conversației, istoricul deciziilor, parametrii de execuție
+
+
+SLIDE 7 – MCP vs integrarea clasică prin API-uri
+„Diferența majoră este flexibilitatea. MCP permite descoperirea dinamică a capabilităților și reutilizarea instrumentelor, în timp ce API-urile clasice creează dependențe rigide.”
+🧠 Dacă insistă:
+MCP nu elimină API-urile, ci le abstractizează
+
+
+SLIDE 8 – Interoperabilitatea facilitată de MCP
+„Interoperabilitatea înseamnă nu doar comunicare, ci și înțelegerea contextului. MCP standardizează acest schimb și permite colaborarea eficientă între agenți independenți.”
+🧠 Întrebare bună:
+De ce e important schimbul de context?
+👉 Fără context, agenții dau răspunsuri incoerente sau incomplete
+
+
+SLIDE 9 – Scalabilitatea serverelor MCP
+„Pentru a funcționa la scară mare, serverele MCP trebuie să gestioneze cereri simultane, să mențină context individual și să fie scalabile folosind mecanisme cloud precum load balancing și microservicii.”
+🧠 Dacă intră în cloud:
+Scalare orizontală > verticală
+Microservicii = disponibilitate + flexibilitate
+
+
+SLIDE 10 – Rutarea inteligentă a cererilor
+„MCP permite rutarea cererilor către agentul cel mai potrivit, pe baza capabilităților detectate dinamic. Astfel se optimizează resursele și se reduce latența.”
+🧠 Întrebare posibilă:
+Rutare statică vs inteligentă?
+👉 Statică = endpoint fix
+👉 Inteligentă = decizie dinamică în timp real
+
+
+SLIDE 11 – Concluzii și perspective
+„MCP consolidează interoperabilitatea agentică și oferă o bază solidă pentru Web-ul Agentic Deschis. Deși există provocări legate de securitate și implementare, potențialul său ca standard global este semnificativ.”
+🧠 Dacă te întreabă „ce urmează?”:
+maturizarea ecosistemului
+standarde de securitate
+adopție industrială
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
