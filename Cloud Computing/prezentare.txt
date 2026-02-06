@@ -25,6 +25,7 @@ Agent = AI?
 
 
 SLIDE 4 – De la aplicații clasice la sisteme multi-agent
+„Sistemele multi-agent distribuie responsabilitățile între agenți specializați. Acest lucru crește flexibilitatea, toleranța la erori și se potrivește foarte bine cu infrastructurile cloud.”
 🧠 Dacă te provoacă:
 De ce cloud + multi-agent funcționează bine împreună?
 👉 Cloud oferă:
@@ -34,6 +35,7 @@ distribuție geografică
 
 
 SLIDE 5 – Necesitatea standardizării în Web-ul Agentic
+„Fără standarde comune, fiecare agent devine un sistem izolat. Lipsa standardizării duce la fragmentare și integrare dificilă. De aceea este nevoie de un protocol precum MCP.”
 🧠 Întrebare clasică:
 „De ce nu sunt suficiente API-urile?”
 👉 API-urile:
