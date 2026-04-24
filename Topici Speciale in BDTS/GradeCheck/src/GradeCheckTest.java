@@ -58,4 +58,10 @@ public class GradeCheckTest {
         int[] grades = {10, 10, 10};
         assertEquals("TRECUT", GradeCheck.evaluateStudent(grades, 95, false));
     }
+
+    @Test
+    void n_0() {
+        int[] grades = {};
+        assertEquals("PICAT", GradeCheck.evaluateStudent(grades, 40, false));
+    }
 }
