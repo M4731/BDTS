@@ -1,0 +1,424 @@
+-- CREARE USER SPECIAL PT PROIECT
+
+CREATE USER USER_SECURITATE
+IDENTIFIED BY 1234;
+
+-- ACORDAM DREPTURI
+
+GRANT CONNECT, RESOURCE TO USER_SECURITATE;
+
+ALTER USER USER_SECURITATE
+QUOTA UNLIMITED ON USERS;
+
+SELECT username
+FROM dba_users
+WHERE username='USER_SECURITATE';
+
+GRANT CREATE VIEW TO USER_SECURITATE;
+GRANT CREATE SYNONYM TO USER_SECURITATE;
+
+--pt criptare
+GRANT EXECUTE ON SYS.DBMS_CRYPTO TO USER_SECURITATE;
+
+
+--pt auditare
+GRANT EXECUTE ON SYS.DBMS_FGA TO USER_SECURITATE;
+
+--create tables
+
+-- LOCATIE
+CREATE TABLE LOCATIE (
+    id_locatie NUMBER,
+    judet VARCHAR2(20),
+    localitate VARCHAR2(20),
+    strada VARCHAR2(20),
+    detalii VARCHAR2(50),
+
+    CONSTRAINT pk_locatie
+        PRIMARY KEY (id_locatie)
+);
+
+-- UTILAJ
+CREATE TABLE UTILAJ (
+    id_utilaj NUMBER,
+    nume VARCHAR2(50) NOT NULL,
+    an_fabricatie DATE NOT NULL,
+
+    CONSTRAINT pk_utilaj
+        PRIMARY KEY (id_utilaj)
+);
+
+-- COLABORATORI
+CREATE TABLE COLABORATORI (
+    id_colaborator NUMBER,
+    nume VARCHAR2(100) NOT NULL,
+    numar_telefon VARCHAR2(15) NOT NULL,
+
+    CONSTRAINT pk_colaboratori
+        PRIMARY KEY (id_colaborator)
+);
+
+-- CLIENT
+CREATE TABLE CLIENT (
+    id_client NUMBER,
+    nume VARCHAR2(100) NOT NULL,
+    prenume VARCHAR2(100) NOT NULL,
+    numar_telefon VARCHAR2(15) NOT NULL,
+    nr_lucrari_anterioare NUMBER,
+
+    CONSTRAINT pk_client
+        PRIMARY KEY (id_client),
+
+    CONSTRAINT ck_client_lucrari
+        CHECK (nr_lucrari_anterioare >= 0)
+);
+
+-- OFERTA
+CREATE TABLE OFERTA (
+    id_oferta NUMBER,
+    pret NUMBER,
+
+    CONSTRAINT pk_oferta
+        PRIMARY KEY (id_oferta)
+);
+
+-- SEF
+CREATE TABLE SEF (
+    id_sef NUMBER,
+    nume VARCHAR2(100) NOT NULL,
+    prenume VARCHAR2(100) NOT NULL,
+    numar_telefon VARCHAR2(15) NOT NULL,
+    varsta NUMBER,
+    experienta NUMBER,
+    salariu NUMBER,
+
+    CONSTRAINT pk_sef
+        PRIMARY KEY (id_sef),
+
+    CONSTRAINT ck_sef_varsta
+        CHECK (varsta >= 18),
+
+    CONSTRAINT ck_sef_experienta
+        CHECK (experienta >= 0),
+
+    CONSTRAINT ck_sef_salariu
+        CHECK (salariu > 0)
+);
+
+-- LUCRARE
+CREATE TABLE LUCRARE (
+    id_lucrare NUMBER,
+    nume VARCHAR2(50),
+    cod_locatie NUMBER NOT NULL,
+    cod_sef NUMBER NOT NULL,
+
+    CONSTRAINT pk_lucrare
+        PRIMARY KEY (id_lucrare),
+
+    CONSTRAINT fk_lucrare_locatie
+        FOREIGN KEY (cod_locatie)
+        REFERENCES LOCATIE(id_locatie),
+
+    CONSTRAINT fk_lucrare_sef
+        FOREIGN KEY (cod_sef)
+        REFERENCES SEF(id_sef)
+);
+
+
+-- FACTURA
+
+CREATE TABLE FACTURA (
+    id_factura NUMBER,
+    cod_oferta_acceptata NUMBER,
+    cod_client NUMBER,
+    cod_lucrare NUMBER NOT NULL,
+    data_facturare DATE NOT NULL,
+
+    CONSTRAINT pk_factura
+        PRIMARY KEY (id_factura),
+
+    CONSTRAINT fk_factura_oferta
+        FOREIGN KEY (cod_oferta_acceptata)
+        REFERENCES OFERTA(id_oferta),
+
+    CONSTRAINT fk_factura_client
+        FOREIGN KEY (cod_client)
+        REFERENCES CLIENT(id_client),
+
+    CONSTRAINT fk_factura_lucrare
+        FOREIGN KEY (cod_lucrare)
+        REFERENCES LUCRARE(id_lucrare)
+);
+
+-- RECENZIE
+CREATE TABLE RECENZIE (
+    id_recenzie NUMBER,
+    cod_client NUMBER NOT NULL,
+    cod_lucrare NUMBER NOT NULL,
+    parere VARCHAR2(200),
+
+    CONSTRAINT pk_recenzie
+        PRIMARY KEY (id_recenzie),
+
+    CONSTRAINT fk_recenzie_client
+        FOREIGN KEY (cod_client)
+        REFERENCES CLIENT(id_client),
+
+    CONSTRAINT fk_recenzie_lucrare
+        FOREIGN KEY (cod_lucrare)
+        REFERENCES LUCRARE(id_lucrare)
+);
+
+-- ECHIPA
+CREATE TABLE ECHIPA (
+    id_echipa NUMBER,
+    cod_sef NUMBER NOT NULL,
+
+    CONSTRAINT pk_echipa
+        PRIMARY KEY (id_echipa),
+
+    CONSTRAINT fk_echipa_sef
+        FOREIGN KEY (cod_sef)
+        REFERENCES SEF(id_sef)
+);
+
+-- ANGAJAT
+CREATE TABLE ANGAJAT (
+    id_angajat NUMBER,
+    nume VARCHAR2(100) NOT NULL,
+    prenume VARCHAR2(100) NOT NULL,
+    numar_telefon VARCHAR2(15) NOT NULL,
+    varsta NUMBER,
+    specializare VARCHAR2(30),
+    experienta NUMBER,
+    salariu NUMBER,
+    cod_echipa NUMBER,
+
+    CONSTRAINT pk_angajat
+        PRIMARY KEY (id_angajat),
+
+    CONSTRAINT ck_angajat_varsta
+        CHECK (varsta >= 18),
+
+    CONSTRAINT ck_angajat_experienta
+        CHECK (experienta >= 0),
+
+    CONSTRAINT ck_angajat_salariu
+        CHECK (salariu > 0),
+
+    CONSTRAINT fk_angajat_echipa
+        FOREIGN KEY (cod_echipa)
+        REFERENCES ECHIPA(id_echipa)
+);
+
+-- PROGRAMARE_UTILAJE
+CREATE TABLE PROGRAMARE_UTILAJE (
+    cod_utilaj NUMBER NOT NULL,
+    cod_locatie NUMBER NOT NULL,
+    data_inceput DATE NOT NULL,
+    data_terminare DATE NOT NULL,
+
+    CONSTRAINT pk_programare_utilaje
+        PRIMARY KEY (cod_utilaj, cod_locatie),
+
+    CONSTRAINT fk_programare_utilaj
+        FOREIGN KEY (cod_utilaj)
+        REFERENCES UTILAJ(id_utilaj),
+
+    CONSTRAINT fk_programare_locatie
+        FOREIGN KEY (cod_locatie)
+        REFERENCES LOCATIE(id_locatie)
+);
+
+-- SELECTIE_COLABORATORI
+CREATE TABLE SELECTIE_COLABORATORI (
+    id_selectie NUMBER,
+    cod_colaborator NUMBER NOT NULL,
+    cod_oferta NUMBER NOT NULL,
+    procent_colaborator NUMBER DEFAULT 10,
+
+    CONSTRAINT pk_selectie_colaboratori
+        PRIMARY KEY (id_selectie),
+
+    CONSTRAINT fk_selectie_colaborator
+        FOREIGN KEY (cod_colaborator)
+        REFERENCES COLABORATORI(id_colaborator),
+
+    CONSTRAINT fk_selectie_oferta
+        FOREIGN KEY (cod_oferta)
+        REFERENCES OFERTA(id_oferta)
+);
+
+
+--insert data into tables
+
+-- LOCATIE
+INSERT INTO LOCATIE VALUES (1,'Bucuresti','Sector 1','Aviatorilor','Bloc A1');
+INSERT INTO LOCATIE VALUES (2,'Bucuresti','Sector 3','Decebal','Bloc B2');
+INSERT INTO LOCATIE VALUES (3,'Cluj','Cluj-Napoca','Memorandumului','Casa 12');
+INSERT INTO LOCATIE VALUES (4,'Timis','Timisoara','Take Ionescu','Birou 4');
+INSERT INTO LOCATIE VALUES (5,'Iasi','Iasi','Pacurari','Vila 5');
+INSERT INTO LOCATIE VALUES (6,'Brasov','Brasov','Muresenilor','Etaj 2');
+INSERT INTO LOCATIE VALUES (7,'Constanta','Constanta','Mamaia','Hotel 3');
+INSERT INTO LOCATIE VALUES (8,'Sibiu','Sibiu','Nicolae Balcescu','Spatiu comercial');
+INSERT INTO LOCATIE VALUES (9,'Bihor','Oradea','Republicii','Bloc C3');
+INSERT INTO LOCATIE VALUES (10,'Arges','Pitesti','Exercitiu','Apartament 10');
+
+
+-- UTILAJ
+INSERT INTO UTILAJ VALUES (1,'Excavator CAT', DATE '2018-05-10');
+INSERT INTO UTILAJ VALUES (2,'Buldozer Komatsu', DATE '2019-03-12');
+INSERT INTO UTILAJ VALUES (3,'Macara Liebherr', DATE '2020-06-15');
+INSERT INTO UTILAJ VALUES (4,'Miniincarcator Bobcat', DATE '2017-02-01');
+INSERT INTO UTILAJ VALUES (5,'Excavator Volvo', DATE '2021-08-20');
+INSERT INTO UTILAJ VALUES (6,'Buldoexcavator JCB', DATE '2022-04-18');
+INSERT INTO UTILAJ VALUES (7,'Compactor Hamm', DATE '2020-10-05');
+INSERT INTO UTILAJ VALUES (8,'Autobetoniera MAN', DATE '2019-09-11');
+INSERT INTO UTILAJ VALUES (9,'Macara Grove', DATE '2023-01-15');
+INSERT INTO UTILAJ VALUES (10,'Incarcator frontal CAT', DATE '2024-02-01');
+
+
+-- COLABORATORI
+INSERT INTO COLABORATORI VALUES (1,'Construct Expert SRL','0711111111');
+INSERT INTO COLABORATORI VALUES (2,'Mega Build SRL','0722222222');
+INSERT INTO COLABORATORI VALUES (3,'Urban Construct','0733333333');
+INSERT INTO COLABORATORI VALUES (4,'Smart Engineering','0744444444');
+INSERT INTO COLABORATORI VALUES (5,'Delta Construct','0755555555');
+INSERT INTO COLABORATORI VALUES (6,'Nord Vest Grup','0766666666');
+INSERT INTO COLABORATORI VALUES (7,'Proiect Plus','0777777777');
+INSERT INTO COLABORATORI VALUES (8,'Arhitect Design','0788888888');
+INSERT INTO COLABORATORI VALUES (9,'Construct Rapid','0799999999');
+INSERT INTO COLABORATORI VALUES (10,'Build Team','0700000000');
+
+
+-- CLIENT
+INSERT INTO CLIENT VALUES (1,'Popescu','Andrei','0712000001',2);
+INSERT INTO CLIENT VALUES (2,'Ionescu','Maria','0712000002',0);
+INSERT INTO CLIENT VALUES (3,'Dumitru','Alex','0712000003',1);
+INSERT INTO CLIENT VALUES (4,'Georgescu','Elena','0712000004',4);
+INSERT INTO CLIENT VALUES (5,'Stan','Mihai','0712000005',3);
+INSERT INTO CLIENT VALUES (6,'Radu','Cristina','0712000006',0);
+INSERT INTO CLIENT VALUES (7,'Voicu','Daniel','0712000007',5);
+INSERT INTO CLIENT VALUES (8,'Marin','Ana','0712000008',2);
+INSERT INTO CLIENT VALUES (9,'Enache','Paul','0712000009',1);
+INSERT INTO CLIENT VALUES (10,'Ilie','Raluca','0712000010',6);
+
+
+-- OFERTA
+INSERT INTO OFERTA VALUES (1,15000);
+INSERT INTO OFERTA VALUES (2,28000);
+INSERT INTO OFERTA VALUES (3,45000);
+INSERT INTO OFERTA VALUES (4,32000);
+INSERT INTO OFERTA VALUES (5,67000);
+INSERT INTO OFERTA VALUES (6,52000);
+INSERT INTO OFERTA VALUES (7,84000);
+INSERT INTO OFERTA VALUES (8,21000);
+INSERT INTO OFERTA VALUES (9,39000);
+INSERT INTO OFERTA VALUES (10,96000);
+
+
+-- SEF
+INSERT INTO SEF VALUES (1,'Popa','Andrei','0723000001',42,15,8500);
+INSERT INTO SEF VALUES (2,'Ionescu','Mihai','0723000002',39,12,7800);
+INSERT INTO SEF VALUES (3,'Georgescu','Elena','0723000003',45,20,9200);
+INSERT INTO SEF VALUES (4,'Marin','Cristian','0723000004',38,11,7600);
+INSERT INTO SEF VALUES (5,'Stan','Raluca','0723000005',41,14,8700);
+INSERT INTO SEF VALUES (6,'Dumitru','Paul','0723000006',50,25,10500);
+INSERT INTO SEF VALUES (7,'Voicu','Alexandru','0723000007',37,10,7400);
+INSERT INTO SEF VALUES (8,'Enache','Maria','0723000008',43,17,9000);
+INSERT INTO SEF VALUES (9,'Ilie','Cosmin','0723000009',40,13,8200);
+INSERT INTO SEF VALUES (10,'Radu','Ana','0723000010',36,9,7000);
+
+
+-- ECHIPA
+INSERT INTO ECHIPA VALUES (1,1);
+INSERT INTO ECHIPA VALUES (2,2);
+INSERT INTO ECHIPA VALUES (3,3);
+INSERT INTO ECHIPA VALUES (4,4);
+INSERT INTO ECHIPA VALUES (5,5);
+INSERT INTO ECHIPA VALUES (6,6);
+INSERT INTO ECHIPA VALUES (7,7);
+INSERT INTO ECHIPA VALUES (8,8);
+INSERT INTO ECHIPA VALUES (9,9);
+INSERT INTO ECHIPA VALUES (10,10);
+
+
+-- ANGAJAT
+INSERT INTO ANGAJAT VALUES (1,'Matei','Daniel','0734000001',24,'Zidar',2,4500,1);
+INSERT INTO ANGAJAT VALUES (2,'Popescu','Andrei','0734000002',29,'Electrician',5,5200,2);
+INSERT INTO ANGAJAT VALUES (3,'Ionescu','Maria','0734000003',27,'Instalator',4,5000,3);
+INSERT INTO ANGAJAT VALUES (4,'Stan','Cristian','0734000004',31,'Finisor',7,5600,4);
+INSERT INTO ANGAJAT VALUES (5,'Voicu','Elena','0734000005',26,'Dulgher',3,4700,5);
+INSERT INTO ANGAJAT VALUES (6,'Marin','Paul','0734000006',28,'Operator utilaj',5,5500,6);
+INSERT INTO ANGAJAT VALUES (7,'Radu','Alex','0734000007',35,'Sudor',10,6500,7);
+INSERT INTO ANGAJAT VALUES (8,'Enache','Ana','0734000008',30,'Arhitect',6,6200,8);
+INSERT INTO ANGAJAT VALUES (9,'Ilie','George','0734000009',25,'Topograf',2,4800,9);
+INSERT INTO ANGAJAT VALUES (10,'Dumitru','Raluca','0734000010',33,'Inginer',8,7000,10);
+
+
+-- LUCRARE
+INSERT INTO LUCRARE VALUES (1,'Fundatie casa',1,1);
+INSERT INTO LUCRARE VALUES (2,'Bloc locuinte',2,2);
+INSERT INTO LUCRARE VALUES (3,'Renovare cladire',3,3);
+INSERT INTO LUCRARE VALUES (4,'Amenajare birouri',4,4);
+INSERT INTO LUCRARE VALUES (5,'Constructie hala',5,5);
+INSERT INTO LUCRARE VALUES (6,'Extindere depozit',6,6);
+INSERT INTO LUCRARE VALUES (7,'Reabilitare fatada',7,7);
+INSERT INTO LUCRARE VALUES (8,'Parcare subterana',8,8);
+INSERT INTO LUCRARE VALUES (9,'Complex rezidential',9,9);
+INSERT INTO LUCRARE VALUES (10,'Constructie vila',10,10);
+
+
+-- FACTURA
+INSERT INTO FACTURA VALUES (1,1,1,1,DATE '2024-01-15');
+INSERT INTO FACTURA VALUES (2,2,2,2,DATE '2024-02-10');
+INSERT INTO FACTURA VALUES (3,3,3,3,DATE '2024-03-05');
+INSERT INTO FACTURA VALUES (4,4,4,4,DATE '2024-04-12');
+INSERT INTO FACTURA VALUES (5,5,5,5,DATE '2024-05-20');
+INSERT INTO FACTURA VALUES (6,6,6,6,DATE '2024-06-08');
+INSERT INTO FACTURA VALUES (7,7,7,7,DATE '2024-07-18');
+INSERT INTO FACTURA VALUES (8,8,8,8,DATE '2024-08-03');
+INSERT INTO FACTURA VALUES (9,9,9,9,DATE '2024-09-14');
+INSERT INTO FACTURA VALUES (10,10,10,10,DATE '2024-10-01');
+
+
+-- RECENZIE
+INSERT INTO RECENZIE VALUES (1,1,1,'Lucrare executata foarte bine.');
+INSERT INTO RECENZIE VALUES (2,2,2,'Personal profesionist.');
+INSERT INTO RECENZIE VALUES (3,3,3,'Calitate buna a serviciilor.');
+INSERT INTO RECENZIE VALUES (4,4,4,'Respectarea termenelor stabilite.');
+INSERT INTO RECENZIE VALUES (5,5,5,'Pret corect pentru serviciile oferite.');
+INSERT INTO RECENZIE VALUES (6,6,6,'Comunicare foarte buna.');
+INSERT INTO RECENZIE VALUES (7,7,7,'Echipa bine organizata.');
+INSERT INTO RECENZIE VALUES (8,8,8,'Rezultat peste asteptari.');
+INSERT INTO RECENZIE VALUES (9,9,9,'Recomand cu incredere.');
+INSERT INTO RECENZIE VALUES (10,10,10,'Foarte multumit de colaborare.');
+
+
+-- PROGRAMARE_UTILAJE
+INSERT INTO PROGRAMARE_UTILAJE VALUES (1,1,DATE '2024-01-01',DATE '2024-01-20');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (2,2,DATE '2024-02-01',DATE '2024-02-25');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (3,3,DATE '2024-03-01',DATE '2024-03-30');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (4,4,DATE '2024-04-01',DATE '2024-04-18');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (5,5,DATE '2024-05-01',DATE '2024-05-22');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (6,6,DATE '2024-06-01',DATE '2024-06-28');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (7,7,DATE '2024-07-01',DATE '2024-07-19');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (8,8,DATE '2024-08-01',DATE '2024-08-26');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (9,9,DATE '2024-09-01',DATE '2024-09-23');
+INSERT INTO PROGRAMARE_UTILAJE VALUES (10,10,DATE '2024-10-01',DATE '2024-10-31');
+
+
+-- SELECTIE_COLABORATORI
+INSERT INTO SELECTIE_COLABORATORI VALUES (1,1,1,10);
+INSERT INTO SELECTIE_COLABORATORI VALUES (2,2,2,12);
+INSERT INTO SELECTIE_COLABORATORI VALUES (3,3,3,15);
+INSERT INTO SELECTIE_COLABORATORI VALUES (4,4,4,8);
+INSERT INTO SELECTIE_COLABORATORI VALUES (5,5,5,20);
+INSERT INTO SELECTIE_COLABORATORI VALUES (6,6,6,18);
+INSERT INTO SELECTIE_COLABORATORI VALUES (7,7,7,10);
+INSERT INTO SELECTIE_COLABORATORI VALUES (8,8,8,25);
+INSERT INTO SELECTIE_COLABORATORI VALUES (9,9,9,14);
+INSERT INTO SELECTIE_COLABORATORI VALUES (10,10,10,30);
+
+
+

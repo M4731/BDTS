@@ -1,0 +1,33 @@
+--in user_securitate
+GRANT SELECT
+ON CLIENT
+TO USER_MANAGER
+WITH GRANT OPTION;
+
+--in user securitate
+GRANT EXECUTE
+ON DECRIPTARE_TEXT
+TO USER_HR;
+GRANT EXECUTE
+ON CRIPTARE_TEXT
+TO USER_HR;
+
+--in user_manager
+select * from USER_SECURITATE.angajat;
+
+--in user_manager
+GRANT SELECT
+ON USER_SECURITATE.CLIENT
+TO USER_HR;
+
+
+--IN USER_HR
+select * from user_securitate.client;
+select * from user_securitate.angajat;
+
+--in user_hr
+SELECT
+    id_angajat,
+    USER_SECURITATE.DECRIPTARE_TEXT(telefon_criptat) AS telefon_decriptat,
+    telefon_criptat
+FROM USER_SECURITATE.ANGAJAT;
