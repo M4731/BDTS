@@ -15,6 +15,7 @@ export default {
   margin-top: 40px;
   padding: 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background: #0f172a;
+  color: #e2e8f0;
 }
 </style>

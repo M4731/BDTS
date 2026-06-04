@@ -13,6 +13,8 @@
       </select>
     </div>
 
+    <br>
+
     <ProductList :products="filteredProducts" />
   </div>
 

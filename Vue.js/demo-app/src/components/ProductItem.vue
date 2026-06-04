@@ -56,17 +56,36 @@ export default {
 
 <style scoped>
 .product-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-
-  padding: 15px;
-  margin-bottom: 15px;
-
-  background: white;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+  background: #fff;
 }
-
-button {
-  padding: 8px 15px;
-  cursor: pointer;
+.product-card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.product-card p {
+  margin: 0 0 14px;
+}
+.product-card button {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #42b883;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: background 0.2s ease;
+}
+.product-card button:hover {
+  background: #2f8f6f;
+}
+.product-card button:last-child {
+  background: #f59e0b;
+}
+.product-card button:last-child:hover {
+  background: #d97706;
 }
 </style>

@@ -12,9 +12,11 @@ export default {
 
 <style scoped>
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 22px;
   margin-top: 15px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
 }
 </style>

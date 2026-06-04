@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul>
+    <ul class="error-list">
       <li
         v-for="error in errors"
         :key="error"

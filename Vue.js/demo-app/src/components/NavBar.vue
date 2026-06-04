@@ -63,29 +63,28 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 15px 30px;
-
-  background-color: #2c3e50;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px 24px;
+  background: #42b883;
 }
-
 .navbar h2 {
-  color: white;
+  color: #f8fafc;
   margin: 0;
 }
-
 .links {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
 }
-
-.links a {
-  color: white;
+.links a,
+.links span {
+  color: #f8fafc;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
-
 .links a.router-link-active {
-  color: #42b983;
+  color: #ffd166;
 }
 </style>

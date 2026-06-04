@@ -6,7 +6,8 @@
     <button @click="importProducts">
       Importă produsele din API în magazin
     </button>
-
+    <br><br>
+    
     <ProductList
       :products="products"
     />
