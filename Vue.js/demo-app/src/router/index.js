@@ -3,9 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProductsView from '../views/ProductsView.vue'
 import ProductDetailView from '../views/ProductDetailView.vue'
-import ProductFormView from '../views/ProductFormView.vue'
+import ProductCreateView from '../views/ProductCreateView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
+import EditProductView from "../views/EditProductView.vue";
+import ApiProductsView from "../views/ApiProductsView.vue";
+import ProductsInfoView from "../views/ProductsInfoView.vue";
 
 const routes = [
   {
@@ -16,17 +19,28 @@ const routes = [
   {
     path: '/products',
     name: 'Products',
-    component: ProductsView
+    component: ProductsView,
+    children: [
+      {
+        path: "info",
+        component: ProductsInfoView
+      }
+    ]
   },
   {
     path: '/products/new',
     name: 'ProductForm',
-    component: ProductFormView
+    component: ProductCreateView
   },
   {
     path: '/products/:id',
     name: 'ProductDetail',
     component: ProductDetailView
+  },
+  {
+    path: '/products/:id/edit',
+    name: 'EditProduct',
+    component: EditProductView
   },
   {
     path: '/login',
@@ -37,6 +51,11 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterView
+  },
+  {
+    path: '/api/products',
+    name: 'ApiProducts',
+    component: ApiProductsView
   }
 ]
 

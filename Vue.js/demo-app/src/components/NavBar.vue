@@ -9,6 +9,8 @@
 
       <router-link v-if="isAuthenticated" to="/products/new"> Adaugă Produs </router-link>
 
+      <router-link v-if="isAuthenticated" to="/api/products"> API Produse </router-link>
+
       <template v-if="!isAuthenticated">
         <router-link to="/login"> Login </router-link>
         <router-link to="/register"> Register </router-link>

@@ -7,10 +7,20 @@
     <button @click="goToDetails">
       Vezi detalii
     </button>
+
+    <button @click="goToEdit">
+      Editează
+    </button>
+
+    <button @click="deleteProduct">
+      Șterge
+    </button>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "ProductItem",
 
@@ -22,10 +32,25 @@ export default {
   },
 
   methods: {
+    ...mapMutations("products", [
+      "DELETE_PRODUCT"
+    ]),
+
     goToDetails() {
       this.$router.push(`/products/${this.product.id}`)
+    },
+
+    goToEdit() {
+      this.$router.push(
+        `/products/${this.product.id}/edit`
+      )
+    },
+
+    deleteProduct() {
+      this.DELETE_PRODUCT(this.product.id);
     }
-  }
+
+  },
 }
 </script>
 
