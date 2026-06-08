@@ -1,0 +1,14 @@
+Componența echipei și task-urile realizate - Proiect MA
+
+MEMBRII ECHIPEI ȘI TASK-URI:
+
+1. Mîndruleanu Matei-Daniel
+   - Modul analiza: cerințele 1, 2, 3, 4, 5, 6
+   - Modul back-end: cerințele 1, 2, 3, 4, 5, 6, 7, 8
+
+2. Pană Alexandra-Ioana
+   - Modul analiza: cerințele 1, 2, 3, 4, 5, 6
+   - Modul back-end: cerințele 1, 2, 3, 4, 5, 6, 7, 8
+   - Modul front-end: cerințele 1, 2, 3, 4
+
+Menționăm că ne-am ajutat la fiecare punct și am identificat și corectat unele erori care au intervenit.
